@@ -5,23 +5,34 @@
 	let { children } = $props();
 
 	let query = $state("");
-	let isLoading = $state(false);
 </script>
 
 <header class="mb-4">
-	<a href="/" class="font-mono text-2xl block mb-4 hover:underline">
-		<h1>music.jonas.zone</h1>
-	</a>
+	<div class="mb-4 flex items-center gap-4 text-2xl">
+		<span class="animate-spin">💿</span>
+		<a href="/" class=" hover:underline">
+			<h1>music.jonas.zone</h1>
+		</a>
+	</div>
 	<search>
-		<form action={`/song/${query}`} class="flex gap-2" onsubmit={() => (isLoading = true)}>
-			<input type="text" bind:value={query} class="border grow" />
-			<input type="submit" value="search" class="bg-blue-500 px-2 text-white shadow" />
+		<form action={`/song/${query}`} class="flex gap-2">
+			<input
+				type="text"
+				required
+				bind:value={query}
+				class="grow rounded-md border bg-white px-3 py-2 outline-none focus:ring dark:border-slate-700 dark:bg-slate-800"
+			/>
+			<input
+				type="submit"
+				value="Search"
+				class="block cursor-pointer rounded-md bg-emerald-500 px-3 py-2 text-sm text-white hover:-translate-y-px"
+			/>
 		</form>
 	</search>
 </header>
 
 {#key $page}
-	<main in:fly={{ y: 10 }}>
+	<main in:fly={{ y: 10 }} class="prose dark:prose-invert">
 		{@render children()}
 	</main>
 {/key}

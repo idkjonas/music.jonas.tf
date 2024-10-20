@@ -1,7 +1,11 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+	@apply touch-manipulation;
+}
 
 body {
-	@apply p-4 max-w-2xl mx-auto;
+	@apply mx-auto max-w-2xl bg-slate-100 p-4 text-slate-900 dark:bg-slate-900 dark:text-slate-100;
 }
