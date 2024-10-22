@@ -11,7 +11,7 @@
 	<div class="mb-4 flex items-center gap-4 text-2xl">
 		<span class="animate-spin">💿</span>
 		<a href="/" class=" hover:underline">
-			<h1>music.jonas.zone</h1>
+			<h1>music.jonas.tf</h1>
 		</a>
 	</div>
 	<search>
